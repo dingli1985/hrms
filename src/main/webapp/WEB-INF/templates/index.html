@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Spring Thyme Seed Starter Manager</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link rel="stylesheet" type="text/css" media="all"
+	href="../../bootstrap/css/bootstrap.min.css"
+	th:href="@{/bootstrap/css/bootstrap.min.css}" />
+<style type="text/css">
+</style>
+	<script type="text/javascript" src="../../jquery/jquery.min.js" th:src="@{/jquery/jquery.min.js}" ></script>
+	<script type="text/javascript">
+        var myReg = /^[\u4e00-\u9fa5]+$/;
+        var content="操作理由A";
+        var singleWord="";
+        /* <![CDATA[ */
+        var wordCount=0;
+        for (var i = 0; i <content.length ; i++) {
+            singleWord=content.charAt(i);
+            //alert("singleWord====>"+singleWord);
+            if (myReg.test(singleWord)) {
+                wordCount++;
+            } else {
+            }
+        }
+        /* ]]> */
+        //alert("workCount==="+wordCount);
+        if(wordCount>=5){
+            alert("OK");
+        }else{
+            alert("Not Ok");
+        }
+	</script>
+
+</head>
+
+<body>
+
+	<div class="container-fluid">
+		<h1>新航动力</h1>
+		<div class="row-fluid">
+			<div class="span2"></div>
+			<div class="span8">
+				<button class="btn">我的流程</button>
+				<button class="btn">人事管理</button>
+				<button class="btn">系统设置</button>
+
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span2">
+				<!--Sidebar content-->
+				<ul class="nav nav-tabs nav-stacked" data-spy="affix"
+					data-offset-top="125">
+					<li class="active"><a href="#section-1">第一部分</a></li>
+					<li><a href="#section-2">第二部分</a></li>
+					<li><a href="#section-3">第三部分</a></li>
+					<li><a href="#section-4">第四部分</a></li>
+					<li><a href="#section-5">第五部分</a></li>
+				</ul>
+			</div>
+			<div class="span10">
+				<div class="span9">
+					<h5>请选择要申请的流程类型</h5>
+					<label class="checkbox inline"> <input type="radio"
+						id="leave_type" value="option1" /> 请加／调休
+					</label> <label class="checkbox inline"> <input type="radio"
+						id="leave_type" value="option2" /> 加班
+					</label> <label class="checkbox inline"> <input type="radio"
+						id="leave_type" value="option3" /> 外勤
+					</label>
+				</div>
+				<div class="span9" th:include="leave :: leave-add"></div>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>

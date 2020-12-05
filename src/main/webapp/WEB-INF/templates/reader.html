@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Spring Thyme Reader</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		pre {
+			white-space: pre-wrap;
+			white-space: -moz-pre-wrap;
+			white-space: -pre-wrap;
+			white-space: -o-pre-wrap;
+			*word-wrap: break-word;
+			*white-space: normal;
+		}
+
+		.chaper {
+			display: none;
+		}
+
+		.header {
+			border-color: read;
+			border: solid 2px;
+			height: 40px;
+			width: auto;
+			overflow-y: scroll;
+		}
+
+		.chaper_div {
+			border-color: red;
+			height: 100%;
+			width: auto;
+			overflow-y: scroll;
+			display: none;
+			margin: 0 auto;
+		}
+
+		.chapter_content {
+			border-color: red;
+			border: solid 2px;
+			height: 100%;
+			width: auto;
+			overflow-y: scroll;
+			display: none;
+			margin: 0 auto 45px;
+		}
+
+		.catagory_div {
+			width: 210px;
+			float: left;
+			height: 100%;
+			border: solid 2px;
+			border-color: red;
+			overflow-y: scroll;
+		}
+
+		.content_area {
+			min-height: 80%;
+			padding: 15px 10px 10px 15px;
+		}
+
+		.page_bar {
+			position: fixed;
+			left: 250px;
+			bottom: 0px;
+			height: 40px;
+			border-style: solid 1px;
+			border-color: #FF0000;
+		}
+
+		.rightcontent {
+			margin-left: 220px;
+			border: solid 2px;
+			border-color: red;
+			height: 100%;
+		}
+	</style>
+	<script type="text/javascript" src="../../jquery/jquery.min.js" th:src="@{/jquery/jqyery.min.js}" ></script>
+	<script type="text/javascript" src="../../js/tools.js" th:src="@{/js/tools.js}" ></script>
+	<script type="text/javascript" src="../../js/reader.js" th:src="@{/js/reader.js}" ></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<h1>人力资源管理系统</h1>
+		</div>
+		<div id="wapper">
+			<div class="header">
+				<input type="file" id="files" style="display: none" />
+				<input type="button" id="import" value="导入阅读" />
+				<select id="encode">
+					<option value="utf-8">utf-8</option>
+					<option value="gb2312">gb2312</option>
+				</select>
+			</div>
+			<div id="catalog" class="catagory_div"></div>
+			<div class="rightcontent">
+				<div id="content" class="content_area"></div>
+				<div class="page_bar">
+					<input type="button" chapterId="book_preface_chapter" id="lastPage"
+						   value="上一页" disabled="disabled" /> <input type="button"
+														  chapterId="book1_chapter" id="nextPage" value="下一页" /> <input
+						type="hidden" value="" id="selectedChapterId" /> <input
+						type="hidden" value="" id="maxChapterIndex" />
+				</div>
+			</div>
+		</div>
+		<div class="row" th:include="footer :: copy">
+			<h4 th:text="#{login.copyright}">版权所有</h4>
+		</div>
+	</div>
+</body>
+</html>

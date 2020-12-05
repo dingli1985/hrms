@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Spring Thyme Seed Starter Manager</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link rel="stylesheet" type="text/css" media="all"
+	href="../../bootstrap/css/bootstrap.min.css"
+	th:href="@{/bootstrap/css/bootstrap.min.css}" />
+<style type="text/css">
+</style>
+
+</head>
+
+<body>
+
+	<form th:fragment="leave-add">
+		<table>
+			<tr>
+				<td><label>姓名:</label></td>
+				<td><input type="text" class="input-medium" id="inputEmail" /></td>
+				<td><label>账号:</label></td>
+				<td><input type="text" class="input-medium" id="inputEmail" /></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><label>所属部门:</label></td>
+				<td><input type="text" class="input-medium" id="inputEmail" /></td>
+				<td><label>职位:</label></td>
+				<td><input type="text" class="input-medium" id="inputEmail" /></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><label>请加事由:</label></td>
+				<td colspan="7">
+					<div class="form-group">
+						<!-- <textarea class="form-control col-xs-12" rows="5"></textarea> -->
+						<div style="border: 1px solid" contenteditable="true">可以编辑里面的内容</div>
+
+					</div>
+				</td>
+
+			</tr>
+			<tr>
+				<td><label>请加时间:</label></td>
+				<td><input type="text" class="input-medium" id="inputEmail" /></td>
+				<td><label>到:</label></td>
+				<td><input type="text" class="input-medium" id="inputEmail" /></td>
+				<td><label>共:</label></td>
+				<td><input type="text" class="input-mini" id="inputEmail" /></td>
+				<td><label>天:</label></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><label>属:</label></td>
+				<td colspan="7"><input type="radio" id="inlineCheckbox1"
+					value="option1" /> 事假 <input type="radio" id="inlineCheckbox1"
+					value="option1" /> 病假 <input type="radio" id="inlineCheckbox1"
+					value="option1" /> 调休 <input type="radio" id="inlineCheckbox1"
+					value="option1" /> 年假 <input type="radio" id="inlineCheckbox1"
+					value="option1" /> 其他 <input type="text" class="input-mini"
+					id="other" /></td>
+
+			</tr>
+			<tr>
+				<td><label>附件信息:</label></td>
+				<td colspan="7"><input type="text" class="input-xlarge" />
+					<button>上传</button></td>
+			</tr>
+		</table>
+	</form>
+	<form th:fragment="leave-rest">
+		<table>
+			<tr>
+				<td><label>姓名:</label></td>
+				<td><input type="text" class="input-medium" id="inputEmail" /></td>
+				<td><label>账号:</label></td>
+				<td><input type="text" class="input-medium" id="inputEmail" /></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><label>所属部门:</label></td>
+				<td><input type="text" class="input-medium" id="inputEmail" /></td>
+				<td><label>职位:</label></td>
+				<td><input type="text" class="input-medium" id="inputEmail" /></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><label>加班事由:</label></td>
+				<td colspan="7">
+					<div class="form-group">
+						<!-- <textarea class="form-control col-xs-12" rows="5"></textarea> -->
+						<div style="border: 1px solid" contenteditable="true">可以编辑里面的内容</div>
+
+					</div>
+				</td>
+
+			</tr>
+			<tr>
+				<td><label>请加时间:</label></td>
+				<td><input type="text" class="input-medium" id="inputEmail" /></td>
+				<td><label>到:</label></td>
+				<td><input type="text" class="input-medium" id="inputEmail" /></td>
+				<td><label>共:</label></td>
+				<td><input type="text" class="input-mini" id="inputEmail" /></td>
+				<td><label>天:</label></td>
+				<td></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

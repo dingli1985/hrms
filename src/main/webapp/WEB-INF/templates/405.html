@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Spring Thyme Seed Starter Manager</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link rel="stylesheet" type="text/css" media="all"
+	href="../../bootstrap/css/bootstrap.min.css"
+	th:href="@{/bootstrap/css/bootstrap.min.css}" />
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="row">
+			<h1>人力资源管理系统</h1>
+
+		</div>
+		<div class="table">
+			<table>
+				<tr>
+					<td><H4 th:text="${tips}"></H4></td>
+				
+				</tr>
+
+			</table>
+		</div>
+		<div class="row" th:include="footer :: copy">
+			<h4 th:text="#{login.copyright}">版权所有</h4>
+		</div>
+
+
+
+
+	</div>
+
+
+
+
+
+</body>
+</html>
